@@ -16,26 +16,28 @@
 </head>
 
 <body onload="app.loadData()">
-    <div class="jumbotron text-center" style="background-color:#00b4d8 !important;
-                                                color: white !important">
-        <h1>Covid Web App</h1>
-        <p style="color: #343a40">Parcial Segundo Corte ARSW</p>
+    <div class="container">
+        <div class="jumbotron text-center" style="background-color:#00b4d8 !important;
+        color: white !important">
+            <h1>Weather web app</h1>
+            <p style="color: #343a40">Parcial Segundo Corte ARSW</p>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <div class="form text-center w-25">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">City Name: </label>
+                        <input type="text" class="form-control" id="input" placeholder="London">
+                        <button class="btn btn-primary" onclick="app.click()">Show</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card" id="data"></div>
+            </div>
+        </div>
     </div>
-    <table id="table" class="table able-striped table-bordered table-sm">
-        <thead class="thead-dark">
-            <tr>
-                <th>Country</th>
-                <th>Deaths</th>
-                <th>Confirmed</th>
-                <th>Recovered</th>
-                <th>More</th>
-            </tr>
-        </thead>
-        <tbody id="tbody">
-
-        </tbody>
-    </table>
-    <div id="map"></div>
+    <div id="map" class="container" style="max-width: 75%;"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap"
         async defer></script>
 </body>

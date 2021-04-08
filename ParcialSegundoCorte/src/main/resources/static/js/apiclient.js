@@ -1,39 +1,16 @@
 const apiclient = (() => {
     return {
-        getAllCountries: (callback) => {
+        getDataByCity: (city, callback) => {
             const promise = $.get({
-                url: '/covid/all',
+                url: `/weather/${city}`,
                 type: 'GET',
                 contentType: "application/json"
             }).then(response => {
-                callback(JSON.parse(response), null);
+                console.log(response);
+                callback(response, null);
             }).catch(error => {
                 callback(null, error);
             });
-        },
-
-        getAllDataByCountry: (country , callback) => {
-            const promise = $.get({
-                url: `/covid/${country}`,
-                type: 'GET',
-                contentType: "application/json"
-            }).then(response => {
-                callback(JSON.parse(response), null);
-            }).catch(error => {
-                callback(null, error);
-            });
-        },
-
-        getCoordinateByCountry: (country, callback) => {
-            const promise = $.get({
-                url: `/coordinates/${country}`,
-                type: 'GET',
-                contentType: "application/json"
-            }).then(response => {
-                callback(JSON.parse(response),null);
-            }).catch(error => {
-                callback(null,error);
-            })
         }
     }
 })();
