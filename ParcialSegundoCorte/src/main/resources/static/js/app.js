@@ -25,21 +25,21 @@ const app = (() => {
         console.log('Entreee')
         $('#data').append(
             `
-            <p>Name: ${data.name}</p>
-            <p>Clouds: ${data.cloud.all}</p>
+            <p>Nombre: ${data.name}</p>
+            <p>Nubes: ${data.cloud.all}</p>
             <div>
-                <p><b>Coordenadas</b><p/>
+                <p><b>COORDENADAS</b><p/>
                 <p>Lon: ${data.coord.lon}</p>
                 <p>Lat: ${data.coord.lat}</p>
             </div>
             <p>Pais: ${data.sys.country}</p>
             <div>
-                <p><b>Clima</b><p/>
+                <p><b>CLIMA</b><p/>
                 <p>Principalmente: ${data.weather.main}</p>
-                <p>Description: ${data.weather.description}</p>
+                <p>Descripción: ${data.weather.description}</p>
             </div>
             <div>
-                <p><b>Vientos</b><p/>
+                <p><b>VIENTOS</b><p/>
                 <p>Velocidad: ${data.wind.speed}</p>
             </div>
 

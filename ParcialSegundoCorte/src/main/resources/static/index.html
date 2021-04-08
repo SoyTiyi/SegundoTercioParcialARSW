@@ -16,23 +16,24 @@
 </head>
 
 <body onload="app.loadData()">
-    <div class="container">
+    <div class="container ">
         <div class="jumbotron text-center" style="background-color:#00b4d8 !important;
         color: white !important">
             <h1>Weather web app</h1>
             <p style="color: #343a40">Parcial Segundo Corte ARSW</p>
         </div>
         <div class="row">
-            <div class="col text-center">
-                <div class="form text-center w-25">
-                    <div class="form-group">
+            <div class="col-md-6">
+                <div>
+                    <div class="form-group" style="padding-top: 10px !important; ">
                         <label for="exampleFormControlInput1">City Name: </label>
-                        <input type="text" class="form-control" id="input" placeholder="London">
-                        <button class="btn btn-primary" onclick="app.click()">Show</button>
+                        <input type="text" class="form-control input-sm" id="input" placeholder="London">
                     </div>
+                    <button class="btn btn-primary" onclick="app.click()">Show</button>
                 </div>
             </div>
-            <div class="col text-center">
+            <div class="col-md-6 text-center">
+                <h3>Información</h3>
                 <div class="card" id="data"></div>
             </div>
         </div>
