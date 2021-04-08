@@ -15,6 +15,10 @@ public class Wind implements Serializable {
         this.deg = deg;
     }
 
+    public Wind(){
+        
+    }
+
     public double getSpeed() {
         return speed;
     }

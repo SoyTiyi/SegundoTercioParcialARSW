@@ -39,6 +39,10 @@ public class City implements Serializable{
         this.setCod(cod);
     }
 
+    public City(){
+        
+    }
+
     public int getCod() {
         return cod;
     }

@@ -13,6 +13,10 @@ public class Cloud implements Serializable{
         this.all = all;
     }
 
+    public Cloud(){
+        
+    }
+
     public int getAll(){
         return all;
     }

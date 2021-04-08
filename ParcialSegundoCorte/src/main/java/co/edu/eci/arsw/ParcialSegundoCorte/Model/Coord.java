@@ -10,6 +10,10 @@ public class Coord implements Serializable{
     private double lon;
     private double lat;
 
+    public Coord () {
+        
+    }
+
     public Coord(double lon, double lat){
         this.lon = lon;
         this.lat = lat;

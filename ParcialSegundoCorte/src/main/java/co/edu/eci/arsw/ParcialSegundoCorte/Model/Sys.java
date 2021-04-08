@@ -21,6 +21,10 @@ public class Sys implements Serializable{
         this.sunset = sunset;
     }
 
+    public Sys(){
+        
+    }
+
     public int getType(){
         return type;
     }

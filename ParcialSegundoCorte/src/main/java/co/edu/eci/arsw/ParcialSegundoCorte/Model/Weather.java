@@ -18,6 +18,10 @@ public class Weather implements Serializable{
         this.icon = icon;
     }
 
+    public Weather(){
+        
+    }
+
     public int getId(){
         return id;
     }
