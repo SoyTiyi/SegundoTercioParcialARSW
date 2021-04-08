@@ -23,13 +23,13 @@ public class UnirestTest {
         cities.add("Berlin");
 
         for (String city : cities) {
-            String url = String.format("http://api.openweathermap.org/data/2.5/weather?q=%s&appid=00e6056a80771fabd8617694dc22cf23", city);
+            String url = String.format("https://nameless-cliffs-04134.herokuapp.com/weather/%s", city);
             HttpResponse<JsonNode> response = Unirest
                     .get(url)
                     .asJson();
 
             assertNotNull(response.getBody());
-            assertEquals((int) HttpStatus.SC_OK, response.getStatus());
+            assertEquals((int) HttpStatus.SC_ACCEPTED, response.getStatus());
         }
 
     }
