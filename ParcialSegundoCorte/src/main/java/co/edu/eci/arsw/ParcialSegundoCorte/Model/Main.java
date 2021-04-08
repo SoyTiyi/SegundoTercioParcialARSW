@@ -9,22 +9,38 @@ public class Main implements Serializable{
     private static final long serialVersionUID = 1L;
     private double temp;
     private double feelsLike;
-    private double tempMin;
-    private double tempMax;
+    private double temp_min;
+    private double temp_max;
     private int pressure;
     private int humidity;
 
     public Main(double temp, double feels_like, double temp_min, double temp_max, int pressure, int humidity){
         this.temp = temp;
         this.feelsLike = feels_like;
-        this.tempMin = temp_min;
-        this.tempMax = temp_max;
+        this.setTemp_min(temp_min);
+        this.setTemp_max(temp_max);
         this.pressure = pressure;
         this.humidity = humidity;
     }
 
+    public double getTemp_max() {
+        return temp_max;
+    }
+
+    public void setTemp_max(double temp_max) {
+        this.temp_max = temp_max;
+    }
+
+    public double getTemp_min() {
+        return temp_min;
+    }
+
+    public void setTemp_min(double temp_min) {
+        this.temp_min = temp_min;
+    }
+
     public Main(){
-        
+
     }
 
     public double getTemp(){
@@ -41,22 +57,6 @@ public class Main implements Serializable{
 
     public void setFeelsLike(double feelsLike){
         this.feelsLike = feelsLike;
-    }
-
-    public double getTempMin(){
-        return tempMin;
-    }
-
-    public void setTempMin(double tempMin){
-        this.tempMin = tempMin;
-    }
-
-    public double getTempMax(){
-        return tempMax;
-    }
-
-    public void setTempMax(double tempMax){
-        this.tempMax = tempMax;
     }
 
     public int getPressure(){
